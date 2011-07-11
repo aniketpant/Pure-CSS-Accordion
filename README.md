@@ -7,6 +7,7 @@ A CSS Animation Demo
 ##What all does it have?
 
 It's made using basic CSS techiniques like
+
 1. Keyframe Animations
 2. Transforms
 
