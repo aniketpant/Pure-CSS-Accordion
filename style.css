@@ -1,0 +1,141 @@
+body {
+    font-family: 'Cabin Sketch', 'Calibri';
+}
+
+#main {
+    margin-top: 150px;
+    margin-left: 300px;
+}
+
+footer {
+    margin-top: 50px;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #488AC7;
+    -webkit-animation: move infinite 2s linear;
+    -moz-animation: move infinite 2s linear;
+}
+
+@-webkit-keyframes move {
+    0% { -moz-transform: rotate(0deg); }
+    25% { -moz-transform: rotate(10deg); }
+    75% { -moz-transform: rotate(-10deg); }
+    100% { -moz-transform: rotate(0deg); }
+}
+
+@-moz-keyframes move {
+    0% { -moz-transform: rotate(0deg); }
+    25% { -moz-transform: rotate(10deg); }
+    75% { -moz-transform: rotate(-10deg); }
+    100% { -moz-transform: rotate(0deg); }
+}
+
+@-webkit-keyframes float {
+    0% { margin-left: -1000px; }
+    25% { margin-left: 500px; }
+    75% { margin-left: 400px; }
+    100% { margin-left: 300px; }
+}
+
+@-moz-keyframes float {
+    0% { margin-left: -1000px; }
+    25% { margin-left: 500px; }
+    75% { margin-left: 400px; }
+    100% { margin-left: 300px; }
+}
+
+/* ------------------------------------------ *\
+        Accordion
+\* ------------------------------------------ */
+
+#main {    
+    -webkit-animation: float 1 1.5s ease-in-out;
+    -moz-animation: float 1 1.5s ease-in-out;
+}
+
+.accordion {
+    list-style: none;
+    max-width: 800px;
+    text-rendering: geometricPrecision;
+    font-family: 'Calibri';
+}
+
+.accordion li {
+    float: left;
+    padding: 20px; 
+    width: 100px;
+    height: 175px;
+    max-height: 200px;
+    background: #659EC7; 
+    overflow: hidden;
+    box-shadow: inset 0px 0px 10px #ccc, 0px 0px 10px #659EC7;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.accordion li:hover {
+    width: 300px;
+    background: #488AC7;
+    box-shadow: 0px 0px 10px #488AC7;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+
+.accordion li:first-child {
+    -webkit-border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.accordion li:last-child {
+    -webkit-border-radius: 0px 10px 10px 0px;
+    -moz-border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.accordion li:first-child:hover {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-transform: scale(1.2) rotate(-2deg);
+    -moz-transform: scale(1.2) rotate(-2deg);
+    transform: scale(1.2) rotate(-2deg);
+}
+
+.accordion li:last-child:hover {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-transform: scale(1.2) rotate(2deg);
+    -moz-transform: scale(1.2) rotate(2deg);
+    transform: scale(1.2) rotate(2deg);
+}
+
+.accordion li a {
+    display: inline-block;   
+    color: #fefefe;
+    text-decoration: none;
+    text-shadow: 0px 0px 1px #000, 0px 0px 1px #333;
+    font-size: 20px;
+    cursor: default;
+}
+
+.accordion .info {
+    display: none;
+    color: #FFF8C6;
+    line-height: 22px;
+}
+
+.accordion li:hover > .info {
+    display: block;
+}
